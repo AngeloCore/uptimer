@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+    <meta property="og:title" content="Web Uptimer">
+    <meta property="og:site_name" content="webuptimer.tk">
+    <meta property="og:description" content="Uptime your website now! Free website pinger, no limits Made by Angelo II#0007">
+
+    <meta name="theme-color" content="#21211f">
+
+    <title>Web Uptimer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <link rel="stylesheet" href="/public/style.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">Web Uptimer</label>
+      <ul>
+        <li><a href="/add">Add</a></li>
+        <li><a class="active" href="/remove">Remove</a></li>
+        <li><a href="https://github.com/AngeloCore/uptimer">Github</a></li>
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+    </nav>
+
+    <center class="heading-padding">
+
+      <% if (!all.length) { %>
+        <h2 class="nourls">You don't have any URLs</h2>
+      <% } %>
+
+      <% all.forEach(url => { %>
+        <div class="url-box">
+          <a class="all-url" id="<%= url %>" onclick="javascript: window.open('<%= url %>')"><%= url %></a> <button onclick="submit('<%= url %>')" id="delete<%= url %>" class="delete-btn">Delete</button>
+        </div>
+      <% }); %>
+
+    <script>
+      function submit (url) {
+
+        var data = {
+          url: url,
+          author: "<%= user.id %>"
+        }
+
+        fetch('<%= config.protocol %><%= config.domain %>/api/delete', {
+          method: 'POST',
+          mode: 'cors',
+          cache: 'no-cache',
+          credentials: 'same-origin',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          redirect: 'follow',
+          referrerPolicy: 'no-referrer',
+          body: JSON.stringify(data)
+        }).then(res => res.json()).then(body => {
+
+          if (body.message) {
+            return alert(body.message);
+          }
+
+          if (body.success === true) {
+            location.reload();
+            alert('Success Deleted The URL');
+          }
+          
+        })
+      }
+    </script>
+    <div class="footer-remove">
+
+      <p class="footer-text-powered">Powered by <i class="fab fa-npm npm" aria-hidden="true"></i><a class="web-uptimer" href="https://npmjs.com/package/web-uptimer"> Web Uptimer</a></p>
+
+      <p class="footer-text-github">Checkout this code on <i class="fab fa-github github" aria-hidden="true"></i><a class="github" href="https://github.com/AngeloCore/uptimer"> Github</a></p>
+
+    </div>
+    </center>
+  </body>
+</html>

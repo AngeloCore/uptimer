@@ -1,0 +1,242 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins', sans-serif;;
+  background: #111110;
+}
+nav{
+  background: #32322f;
+  height: 55px;
+  width: 100%;
+}
+label.logo{
+  color: white;
+  font-size: 29px;
+  line-height: 50px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+  z-index: 1;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 55px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+nav ul li a.active, nav ul li a:hover{
+  background: rgba(0, 0, 0, .7);
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 55px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 21px;
+    padding-left: 10px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #21211f;
+    top: 55px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0ffc03;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+@media (max-width: 280px){
+  label.logo {
+    font-size: 15px;
+  }
+}
+.heading {
+  margin-top: 100px;
+}
+
+#url-area {
+  background: #32322f;
+  border: 1px solid transparent;;
+  padding: 10px;
+  border-radius: 50px;
+  color: #fff;
+  font-family: cursive;
+  width: 50%;
+}
+
+#url-area:hover {
+  border: 1px solid rgba(222, 222, 222, .5);
+}
+
+#url-area:focus {
+  outline: none;
+  box-shadow: 0 0 5px #0057ff;
+  border: 1px solid #0057ff;
+}
+
+#submit-btn {
+  border: 1px solid #fff;
+  padding: 10px;
+  margin-top: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+  background: rgba(0, 0, 0, .5);
+  border-radius: 5px;
+  transition: .2s linear;
+}
+
+#submit-btn:hover {
+  transform: scale(1.2);
+}
+
+#submit-btn:active {
+  outline: none;
+  border: none;
+}
+
+.heading-padding {
+  padding: 100px 200px;
+}
+
+.url-box {
+  background: #32322f;
+  padding: 20px 0;
+  /*text-align: left;
+  align-items: left;*/
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.all-url {
+  color: #fff;
+  margin-right: 70%;
+  transition: 200ms linear;
+}
+
+.nourls {
+    color: #fff;
+    font-size: 30px;
+    position: relative;
+    bottom: 20px;
+}
+
+.all-url:hover {
+  color: rgba(222, 222, 222, .7);
+  cursor: pointer;
+}
+
+.delete-btn {
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+  background: rgba(255, 0, 0, .5);
+  border-radius: 5px;
+  transition: .2s linear;
+}
+
+.delete-btn:hover {
+  background: rgb(255, 0, 0);
+}
+
+@media screen and (max-width: 768px) {
+
+  #url-area {
+    width: 90%
+  }
+
+  .heading-padding {
+    padding: 50px 10px;
+  }
+
+  .all-url {
+    margin-right: 15%;
+  }
+
+}
+
+.footer {
+    margin-top: 26%;
+}
+
+.footer-remove {
+    margin-top: 44%;
+    margin-bottom: -100px;
+}
+
+.footer-text-github {
+  color: #fff;
+}
+
+a.github {
+  color: gray;
+}
+
+.footer-text-powered {
+  color: #fff;
+}
+
+a.web-uptimer {
+  color: #0ffc03;
+}
+
+i.github {
+  margin-left: 4px;
+  font-size: 20px;
+}
+
+i.npm {
+  margin-left: 4px;
+  font-size: 22px;
+  color: #CC3534;
+}
