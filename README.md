@@ -9,7 +9,7 @@ $ npm i
 ### [Config](https://github.com/AngeloCore/uptimer/blob/main/config.json)
 
 ### Protocol
-#### Put your domain portocolo, example: `https://`
+#### Put your domain portocol, example: `https://`
 ```json
 "protocol": ""
 ```
