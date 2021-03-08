@@ -20,7 +20,7 @@ $ npm i
 ```
 
 ### Discord Login
-- Go to (Discord Developers Portal)[https://discord.com/developers/applications] And create Your Application
+- Go to [Discord Developers Portal](https://discord.com/developers/applications) And create Your Application
 - Copy your client id and paste into `"id": ""`
 - Copy Your Client Secret and paste into `"secret": ""`
 
