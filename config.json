@@ -1,8 +1,8 @@
 {
-  "protocol": "https://",
-  "domain": "webuptime.tk",
+  "protocol": "",
+  "domain": "",
   "login": {
-    "id": "817732935926284288",
-    "secret": "_jM04XUxSFXAOhagQMOmCQCGfwW6SdLa"
+    "id": "",
+    "secret": ""
   }
 }
