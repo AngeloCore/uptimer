@@ -176,6 +176,7 @@ app.get('/callback', passport.authenticate('discord', { failureRedirect: '/' }),
 
 app.get('/logout', function(req, res) {
   req.logout();
+  res.redirect('/');
 });
 
 app.listen('8824', function() {
