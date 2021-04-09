@@ -28,3 +28,5 @@ $ npm i
 ```sh
 $ node .
 ```
+
+> If you got Discord Auth error, check this https://github.com/AngeloCore/uptimer/issues/1
